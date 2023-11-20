@@ -131,6 +131,70 @@ if __name__ == "__main__":
 W tym przykładzie nazwa użytkownika to `example@example.com`. Lista haseł to `hasło1`, `hasło2`, `hasło3`, ... Program będzie próbować logować się do konta Facebook, używając każdej kombinacji nazwy użytkownika i hasła z listy. Jeśli logowanie się powiedzie, program wydrukuje znalezione hasło. W przeciwnym razie program kontynuuje próbowanie kolejnych haseł.
 
 
+
+Aby użyć programu w terminalu Kali, musisz umieścić plik `brute_force.py` w katalogu domowym. Możesz to zrobić, kopiując lub przenosząc plik do katalogu domowego.
+
+**Kopiowanie pliku:**
+
+```
+cp brute_force.py ~
+```
+
+**Przenoszenie pliku:**
+
+```
+mv brute_force.py ~
+```
+
+Po umieszczeniu pliku w katalogu domowym możesz uruchomić go w następujący sposób:
+
+```
+python brute_force.py
+```
+
+Program poprosi Cię o podanie nazwy użytkownika i listy haseł. Możesz podać nazwę użytkownika ręcznie lub skorzystać z polecenia `whois`.
+
+**Podanie nazwy użytkownika ręcznie:**
+
+```
+python brute_force.py
+Podaj nazwę użytkownika: 100041219380500@gmail.com
+```
+
+**Użycie polecenia whois:**
+
+```
+whois 100041219380500@gmail.com
+```
+
+Skopiuj nazwę użytkownika z wyników polecenia whois i wprowadź ją do programu.
+
+**Podanie listy haseł ręcznie:**
+
+```
+python brute_force.py
+Podaj nazwę użytkownika: 100041219380500@gmail.com
+Podaj listę haseł:
+hasło1
+hasło2
+hasło3
+...
+```
+
+**Użycie listy haseł z pliku:**
+
+```
+python brute_force.py
+Podaj nazwę użytkownika: 100041219380500@gmail.com
+Podaj nazwę pliku z listą haseł: hasła.txt
+```
+
+Po podaniu nazwy użytkownika i listy haseł program rozpocznie próbowanie logowania się do konta Facebook. Jeśli logowanie się powiedzie, program wydrukuje znalezione hasło. W przeciwnym razie program kontynuuje próbowanie kolejnych haseł.
+
+**Uwaga:**
+
+Program może zostać zablokowany przez Facebooka, jeśli będzie próbował logować się zbyt wiele razy. Aby uniknąć blokady, ustaw odpowiedni czas oczekiwania między próbami logowania.
+
 **Uwagi końcowe:**
 
 Program służy wyłącznie do celów edukacyjnych i testu bezpieczeństwa. Nie należy go wykorzystywać do nielegalnych działań.
